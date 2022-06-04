@@ -1,0 +1,21 @@
+name: Trabalho da disciplina de praticas DevOps
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+  # Permite que você execute este fluxo de trabalho manualmente
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+      # Fazer o check-out do seu repositório
+      - uses: actions/checkout@v3
+
+      - name: Push da imagem do docker para o 2º trabalho da disciplina de praticas DevOps do curso de POS da Unifametro 
+        run: docker run docker/whalesay comsay Iuri Petrola
